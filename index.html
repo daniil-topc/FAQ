@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <title>Frontend Mentor | FAQ accordion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="img-title">
+          <img src="./assets/images/icon-star.svg" class="star" alt="" />
+          <h1>FAQs</h1>
+        </div>
+
+        <div class="accordion" data-accordion>
+          <div class="accordion-item is-open">
+            <button
+              type="button"
+              class="accordion-trigger"
+              aria-expanded="true"
+              aria-controls="accordion-panel-1"
+              id="accordion-trigger-1"
+            >
+              <span class="accordion-title"
+                >What is Frontend Mentor, and how will it help me?</span
+              >
+              <img
+                class="accordion-icon"
+                src="./assets/images/icon-minus.svg"
+                alt=""
+                width="32"
+                height="32"
+              />
+            </button>
+            <div
+              class="accordion-panel"
+              id="accordion-panel-1"
+              role="region"
+              aria-labelledby="accordion-trigger-1"
+              aria-hidden="false"
+            >
+              <div class="accordion-panel-inner">
+                <p>
+                  Frontend Mentor offers realistic coding challenges to help
+                  developers improve their frontend coding skills with projects in
+                  HTML, CSS, and JavaScript. It's suitable for all levels and ideal
+                  for portfolio building.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button
+              type="button"
+              class="accordion-trigger"
+              aria-expanded="false"
+              aria-controls="accordion-panel-2"
+              id="accordion-trigger-2"
+            >
+              <span class="accordion-title">Is Frontend Mentor free?</span>
+              <img
+                class="accordion-icon"
+                src="./assets/images/icon-plus.svg"
+                alt=""
+                width="32"
+                height="32"
+              />
+            </button>
+            <div
+              class="accordion-panel"
+              id="accordion-panel-2"
+              role="region"
+              aria-labelledby="accordion-trigger-2"
+              aria-hidden="true"
+            >
+              <div class="accordion-panel-inner">
+                <p>
+                  Yes! Many challenges are free. You can also subscribe to Pro for
+                  premium challenges, Figma files, and other perks.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button
+              type="button"
+              class="accordion-trigger"
+              aria-expanded="false"
+              aria-controls="accordion-panel-3"
+              id="accordion-trigger-3"
+            >
+              <span class="accordion-title"
+                >Can I use Frontend Mentor projects in my portfolio?</span
+              >
+              <img
+                class="accordion-icon"
+                src="./assets/images/icon-plus.svg"
+                alt=""
+                width="32"
+                height="32"
+              />
+            </button>
+            <div
+              class="accordion-panel"
+              id="accordion-panel-3"
+              role="region"
+              aria-labelledby="accordion-trigger-3"
+              aria-hidden="true"
+            >
+              <div class="accordion-panel-inner">
+                <p>
+                  Definitely! Please do. Frontend Mentor challenges are perfect for
+                  your portfolio and help you showcase your skills to potential
+                  employers.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button
+              type="button"
+              class="accordion-trigger"
+              aria-expanded="false"
+              aria-controls="accordion-panel-4"
+              id="accordion-trigger-4"
+            >
+              <span class="accordion-title"
+                >How can I get help if I'm stuck on a challenge?</span
+              >
+              <img
+                class="accordion-icon"
+                src="./assets/images/icon-plus.svg"
+                alt=""
+                width="32"
+                height="32"
+              />
+            </button>
+            <div
+              class="accordion-panel"
+              id="accordion-panel-4"
+              role="region"
+              aria-labelledby="accordion-trigger-4"
+              aria-hidden="true"
+            >
+              <div class="accordion-panel-inner">
+                <p>
+                  The best place to get help is inside the Frontend Mentor Discord
+                  community. There's a help channel and other developers who can
+                  give feedback and support.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Meid By Daniil</p>
+      <div class="links-footer">
+        <a href="https://www.instagram.com/the_street14/?hl=ru"
+          ><i class="fa-brands fa-instagram custom-icon"></i>Instagram</a
+        >
+      </div>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
+</html>

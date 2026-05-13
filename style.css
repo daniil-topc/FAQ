@@ -1,0 +1,194 @@
+:root {
+  --color-white: hsl(0, 100%, 100%);
+  --color-purple-100: hsl(275, 100%, 97%);
+  --color-purple-600: hsl(292, 16%, 49%);
+  --color-purple-950: hsl(292, 42%, 14%);
+  --background-page: var(--color-purple-100);
+  --background-container: var(--color-white);
+  --container-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+  font-family: "Work Sans", system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-image: url("./assets/images/background-pattern-desktop.svg");
+  background-color: var(--background-page);
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: var(--color-purple-950);
+  -webkit-font-smoothing: antialiased;
+}
+
+main{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  background-color: var(--background-container);
+  width: min(600px, 90%);
+  box-shadow: var(--container-shadow);
+  padding: 40px;
+  min-height: 200px;
+  border-radius: 20px;
+  flex-direction: column;
+}
+
+.img-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+.container h1 {
+  color: var(--color-purple-950);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.attribution {
+  display: flex;
+  justify-content: end;
+}
+
+.accordion {
+  width: 100%;
+}
+
+.accordion-item + .accordion-item {
+  border-top: 1px solid hsl(292, 16%, 90%);
+}
+
+.accordion-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  width: 100%;
+  padding: 1rem 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.accordion-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-purple-950);
+  transition: color 0.2s ease;
+}
+
+.accordion-icon {
+  flex-shrink: 0;
+  display: block;
+}
+
+.accordion-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.accordion-item.is-open .accordion-panel {
+  grid-template-rows: 1fr;
+}
+
+.accordion-panel-inner {
+  overflow: hidden;
+  min-height: 0;
+  padding-top: 0.25rem;
+}
+
+.accordion-panel-inner p {
+  margin: 0;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-purple-600);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accordion-panel {
+    transition: none;
+  }
+}
+
+@media (hover: hover) {
+  .accordion-trigger:hover .accordion-title {
+    color: var(--color-purple-600);
+  }
+}
+
+.accordion-trigger:focus-visible {
+  outline: 2px solid var(--color-purple-600);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: #fff;
+  gap: 10px;
+}
+
+.links-footer {
+  display: flex;
+  align-items: center;
+  
+}
+
+.links-footer a {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+@media all and (max-width: 576px) {
+  body {
+    background-image: url("./assets/images/background-pattern-mobile.svg");
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    min-width: 100px;
+    max-width: 320px;
+    max-height: 100%;
+  }
+
+  .container {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .container h1 {
+    font-size: 1.625rem;
+  }
+
+  .img-title img {
+    width: 30px;
+  }
+}
